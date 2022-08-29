@@ -92,3 +92,9 @@ body.dark .social-icons a:hover {
 body.dark .nav-item:hover {
   background-color: #343a40;
 }
+body.dark .teckstackCaption {
+  color:#fff;
+}
+body.dark .teckstack{
+  background-color: rgb(14, 29, 51);
+}
