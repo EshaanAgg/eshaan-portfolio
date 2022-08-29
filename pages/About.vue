@@ -1,45 +1,62 @@
 <template>
-  
   <div class="container animate__animated animate__fadeIn">
     <div class="row">
       <div class="col-md-9">
-        
         <div class="about">
           <h1 class="line-after">About Me</h1>
           <h4 class="mt-4">Hey 👋</h4>
           <p>
-            I'm <b>Eshaan Aggarwal</b>, a student, and developer from India. 🚀 
+            I'm <b>Eshaan Aggarwal</b>, a student, and developer from India. 🚀
           </p>
 
-          <div class = "col">  
-              <ul style="list-style-type: circle">
-                <li> 💻 I am a Computer Science and Engineering undergraduate student at the Indian Institute of Technology BHU (Varanasi) pursuing a Bachelor of Technology in my second year. </li>
-                <li> 🐱 I have a keen interest in Open Source and Web Development. </li>
-                <li> 🌱 I’m currently learning Next.js and Django. </li>
-                <li> ❓ Ask me about anything related to MEVN stack and related technologies.  </li>
-                <li> 📫 Reach me at <a href="mailto: eshaanagg@gmail.com">eshaanagg@gmail.com</a>. </li>
-                <li> 📄 Know about my experiences <a href="https://www.canva.com/design/DAFKZUTun1c/v9PVUxOj-KIEn7MPmg2jEg/view?utm_content=DAFKZUTun1c&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink">here</a>. </li>
-                <li> ⚡ Fun fact: My favorite team name for Python competitions is `Indented Pun`.😚  </li>
-              </ul>                        
-          
+          <div class="col">
+            <ul style="list-style-type: circle">
+              <li>
+                💻 I am a Computer Science and Engineering undergraduate student
+                at the Indian Institute of Technology BHU (Varanasi) pursuing a
+                Bachelor of Technology in my second year.
+              </li>
+              <li>
+                🐱 I have a keen interest in Open Source and Web Development.
+              </li>
+              <li>🌱 I’m currently learning Next.js and Django.</li>
+              <li>
+                ❓ Ask me about anything related to MEVN stack and related
+                technologies.
+              </li>
+              <li>
+                📫 Reach me at
+                <a href="mailto: eshaanagg@gmail.com">eshaanagg@gmail.com</a>.
+              </li>
+              <li>
+                📄 Know about my experiences
+                <a
+                  href="https://www.canva.com/design/DAFKZUTun1c/v9PVUxOj-KIEn7MPmg2jEg/view?utm_content=DAFKZUTun1c&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
+                  >here</a
+                >.
+              </li>
+              <li>
+                ⚡ Fun fact: My favorite team name for Python competitions is
+                `Indented Pun`.😚
+              </li>
+            </ul>
+
             <TechStack />
           </div>
         </div>
       </div>
-      
-    <div class="col-md-3">
-      <img
+
+      <div class="col-md-3">
+        <img
           src="https://avatars.githubusercontent.com/u/96648934?s=400&u=388fcc11b4e68ab15dad030b529d5b0da8be0945&v=4"
           alt="Eshaan's Github Avatar Wallpaper"
           class="abt-img"
-          style="border-radius:100%; width:350px;"
+          style="border-radius: 100%; width: 350px"
         />
+      </div>
     </div>
-    </div>
-
   </div>
 </template>
-
 
 <script>
 export default {
@@ -47,7 +64,7 @@ export default {
     return {};
   },
   head: {
-    title: "About @EshaanAgg",
+    title: "EshaanAgg | About Me",
   },
 };
 </script>
@@ -75,5 +92,4 @@ export default {
   height: inherit;
   border-radius: 5px;
 }
-
 </style>

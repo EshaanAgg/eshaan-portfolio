@@ -70,6 +70,8 @@ import TwitterIcon from "vue-ionicons/dist/logo-twitter.vue";
 import MailIcon from "vue-ionicons/dist/md-mail.vue";
 import InstagramIcon from "vue-ionicons/dist/logo-instagram.vue";
 
+import socialMediaLinks from "../assets/data/social";
+
 export default {
   components: {
     GithubIcon,
@@ -82,13 +84,7 @@ export default {
   data() {
     return {
       avatar: require("@/assets/avatar.jpg"),
-      socialLinks: {
-        github: "https://github.com/eshaanagg",
-        linkedin : "https://linkedin.com/in/eshaan-aggarwal",
-        twitter: "https://twitter.com/eshaanagg",
-        instagram: "https://instagram.com/eshhh.aan",
-        mail : "mailto : eshaanagg@gmail.com"
-      },
+      socialLinks: socialMediaLinks,
     };
   },
 
