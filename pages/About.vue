@@ -2,7 +2,7 @@
   
   <div class="container animate__animated animate__fadeIn">
     <div class="row">
-      <div class="col-md-8">
+      <div class="col-md-9">
         
         <div class="about">
           <h1 class="line-after">About Me</h1>
@@ -27,7 +27,7 @@
         </div>
       </div>
       
-    <div class="col-md-4">
+    <div class="col-md-3">
       <img
           src="https://avatars.githubusercontent.com/u/96648934?s=400&u=388fcc11b4e68ab15dad030b529d5b0da8be0945&v=4"
           alt="Eshaan's Github Avatar Wallpaper"
