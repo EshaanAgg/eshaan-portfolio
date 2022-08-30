@@ -39,7 +39,9 @@ export default {
   css: ["@assets/css/style.css"],
   plugins: [],
   components: true,
-  buildModules: [],
+  buildModules: [
+    '@nuxtjs/vuetify',
+  ],
   modules: [
     'bootstrap-vue/nuxt',
   ],

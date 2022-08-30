@@ -1,12 +1,15 @@
 <template>
-  <b-card class="mt-3 mb-3">
+  <b-card class="my-3 mx-1 px-1">
+    <center>
     <a :href="project.link">
       <img
         :src="project.image_cover"
         :alt="project.title"
+        style="width:100%; border-radius:5px;"
         class="project-cover"
       />
     </a>
+    </center>
 
     <h2 class="mt-3" style="text-align: center">
       {{ project.title }}
@@ -14,7 +17,7 @@
       <hr class="dope" />
     </h2>
 
-    <b-card class="mt-3 mb-3 text-left text-dark">
+    <b-card class="mt-3 mb-3 projectText">
       <p>{{ project.description }}</p>
       
       <center>
@@ -84,5 +87,9 @@ hr.dope {
   margin: initial;
   margin-bottom: 0.2px;
   margin-left: 5px;
+}
+
+.projectText{
+  font: 16px Quicksand, sans-serif;
 }
 </style>

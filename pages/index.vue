@@ -1,5 +1,5 @@
 <template>
-  <b-row style="margin-left: 0; margin-right: 0">
+  <b-row style="margin-left: 0; margin-right: 0" class="pt-4 mt-4">
     <b-col md="4">
       <b-img
         src="https://avatars.githubusercontent.com/u/96648934?s=400&u=388fcc11b4e68ab15dad030b529d5b0da8be0945&v=4"
