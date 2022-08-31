@@ -1,6 +1,6 @@
 export default {
   target: "static",
-  
+
   head: {
     title: 'eshaan-portfolio',
     htmlAttrs: {
@@ -30,14 +30,13 @@ export default {
           "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
       },
       {
-        rel:"stylesheet",
-        href:"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+        rel: "stylesheet",
+        href: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
       }
     ]
   },
 
   css: ["@assets/css/style.css"],
-  plugins: [],
   components: true,
   buildModules: [
     '@nuxtjs/vuetify',
@@ -45,5 +44,7 @@ export default {
   modules: [
     'bootstrap-vue/nuxt',
   ],
-  build: {}
+  plugins: [
+    { src: '~/plugins/Vuelidate' }
+  ]
 }
