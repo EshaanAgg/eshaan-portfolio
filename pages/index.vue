@@ -1,5 +1,5 @@
 <template>
-  <b-row style="margin-left: 0; margin-right: 0" class="pt-4 mt-4">
+  <b-row style="margin-left: 0; margin-right: 0" class="pt-5 mt-5">
     <b-col md="4">
       <b-img
         src="https://avatars.githubusercontent.com/u/96648934?s=400&u=388fcc11b4e68ab15dad030b529d5b0da8be0945&v=4"
@@ -17,7 +17,7 @@
       <div class="col-md-10 info">
         A <b>student</b> and <b>budding developer</b> from India 🇮🇳.
         <br />
-        
+
         <b-button
           class="action-btn animate__animated animate__wobble animate__delay-4s animate__fast"
           to="/about"
@@ -55,7 +55,6 @@
           <social-link :to="socialLinks.instagram">
             <InstagramIcon />
           </social-link>
-        
         </div>
       </div>
     </b-col>
@@ -63,7 +62,6 @@
 </template>
 
 <script>
-
 import GithubIcon from "vue-ionicons/dist/logo-github.vue";
 import LinkedinIcon from "vue-ionicons/dist/logo-linkedin.vue";
 import TwitterIcon from "vue-ionicons/dist/logo-twitter.vue";
@@ -78,9 +76,9 @@ export default {
     LinkedinIcon,
     TwitterIcon,
     MailIcon,
-    InstagramIcon
+    InstagramIcon,
   },
-  
+
   data() {
     return {
       avatar: require("@/assets/avatar.jpg"),
@@ -98,6 +96,5 @@ export default {
       setTimeout(() => this.$nuxt.$loading.finish(), 500);
     });
   },
-
 };
 </script>

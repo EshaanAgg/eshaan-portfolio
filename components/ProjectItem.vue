@@ -1,14 +1,14 @@
 <template>
-  <b-card class="my-3 mx-1 px-1">
+  <b-card class="my-3 mx-1 px-1 projectItem">
     <center>
-    <a :href="project.link">
-      <img
-        :src="project.image_cover"
-        :alt="project.title"
-        style="width:100%; border-radius:5px;"
-        class="project-cover"
-      />
-    </a>
+      <a :href="project.link">
+        <img
+          :src="project.image_cover"
+          :alt="project.title"
+          style="width: 100%; border-radius: 5px"
+          class="project-cover"
+        />
+      </a>
     </center>
 
     <h2 class="mt-3" style="text-align: center">
@@ -17,25 +17,28 @@
       <hr class="dope" />
     </h2>
 
-    <b-card class="mt-3 mb-3 projectText">
+    <b-card class="mt-3 mb-3 projectText projectItem">
       <p>{{ project.description }}</p>
-      
-      <center>
-      <b-link :href="project.link">
-        {{ getRandomLinkText() }}
-      </b-link>
-      <LinkIcon/>
 
-      <hr />
-      Built with {{ getRandomBuiltWith() }} using
-      <TechGroup :grpIdentifier="'projectTech' + project.title" :technologies="project.tech" class="my-1"/>
-      <b-link :href="project.github_url">
-        {{ getRandomGithubText() }} 
-      </b-link>
-      <GithubIcon />
+      <center>
+        <b-link :href="project.link">
+          {{ getRandomLinkText() }}
+        </b-link>
+        <LinkIcon />
+
+        <hr />
+        Built with {{ getRandomBuiltWith() }} using
+        <TechGroup
+          :grpIdentifier="'projectTech' + project.title"
+          :technologies="project.tech"
+          class="my-1"
+        />
+        <b-link :href="project.github_url">
+          {{ getRandomGithubText() }}
+        </b-link>
+        <GithubIcon />
       </center>
     </b-card>
-  
   </b-card>
 </template>
 
@@ -53,22 +56,37 @@ export default {
   },
   props: ["project"],
   methods: {
-    getRandom(items){
-      return items[Math.floor(Math.random()*items.length)];
+    getRandom(items) {
+      return items[Math.floor(Math.random() * items.length)];
     },
-    getRandomBuiltWith(){
-      const emojis = ['❤️', '☕', '🍕' , '🖥️' , '🍀', '💤', '🌭', '🥪', '🎉'];
+    getRandomBuiltWith() {
+      const emojis = ["❤️", "☕", "🍕", "🖥️", "🍀", "💤", "🌭", "🥪", "🎉"];
       return this.getRandom(emojis);
     },
-    getRandomLinkText(){
-      const arr = ['View it on WWW!', 'See it in action!', 'Hosted here!' , 'Visit it!' , 'Deployed here!', 'View me!', 'See me!'];
+    getRandomLinkText() {
+      const arr = [
+        "View it on WWW!",
+        "See it in action!",
+        "Hosted here!",
+        "Visit it!",
+        "Deployed here!",
+        "View me!",
+        "See me!",
+      ];
       return this.getRandom(arr);
     },
-    getRandomGithubText(){
-      const arr = ['Source code', 'May the source be with you!', 'Detailed stack here' , 'Code for nerds' , 'Hosted on Github here', 'View my repo!'];
+    getRandomGithubText() {
+      const arr = [
+        "Source code",
+        "May the source be with you!",
+        "Detailed stack here",
+        "Code for nerds",
+        "Hosted on Github here",
+        "View my repo!",
+      ];
       return this.getRandom(arr);
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -89,7 +107,7 @@ hr.dope {
   margin-left: 5px;
 }
 
-.projectText{
+.projectText {
   font: 16px Quicksand, sans-serif;
 }
 </style>

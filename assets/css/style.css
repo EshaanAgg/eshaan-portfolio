@@ -1,5 +1,5 @@
 body {
-  transition: background 0.8s linear;
+  transition: all 0.8s linear;
   user-select: none;
   font-family: "Quicksand", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -98,4 +98,22 @@ body.dark .teckstackCaption {
 }
 body.dark .teckstack{
   background-color: rgb(14, 29, 51);
+}
+
+.projectContent, .projectItem, .teckstack, .teckstackCaption, .social-icons {
+  transition: all 0.8s linear;
+}
+
+body.dark .projectContent{
+  background-color: rgb(10, 25, 47) !important;
+  color : whitesmoke;
+}
+
+body.dark .projectItem{
+  background-color: rgb(28, 49, 79);
+  color: whitesmoke;
+}
+
+body.dark .projectItem a {
+  color:rgb(147, 147, 147);
 }
