@@ -19,12 +19,7 @@
           </v-spacer>
         </v-card-title>
         <v-card-text>
-          <form
-            class="px-3 gform"
-            method="POST"
-            action="https://script.google.com/macros/s/AKfycbyp-PfcrVoMa9p8GjJslIFkyy13Q4KZvbAw1yZNTirW_DVRGwt0UeHErZa3hv4bG8xjCA/exec"
-            data-email="eshaanagg@gmail.com"
-          >
+          <form class="px-3" id="contactMeForm">
             <v-text-field
               class="px-2 mx-2"
               v-model="name"
@@ -76,12 +71,27 @@
         </v-card-text>
       </v-card>
     </v-dialog>
+
+    <v-snackbar v-model="emailSentSnackbar" timeout="2" left shaped top>
+      {{ snackbarContent }}
+      <template v-slot:action="{ attrs2 }">
+        <v-btn
+          color="blue"
+          text
+          v-bind="attrs2"
+          @click="emailSentSnackbar = false"
+        >
+          Close
+        </v-btn>
+      </template>
+    </v-snackbar>
   </div>
 </template>
 
 <script>
 import { validationMixin } from "vuelidate";
 import { required, maxLength, email } from "vuelidate/lib/validators";
+import emailjs from "emailjs-com";
 
 export default {
   mixins: [validationMixin],
@@ -125,12 +135,42 @@ export default {
       content: "",
       email: "",
       dialog: false,
+      emailSentSnackbar: false,
+      snackbarContent: "",
     };
   },
   methods: {
     submit() {
       this.$v.$touch();
-      console.log(this.name, this.content, this.email);
+      if (
+        this.nameErrors.length == 0 &&
+        this.emailErrors.length == 0 &&
+        this.contentErrors.length == 0
+      ) {
+        try {
+          // emailjs.sendForm(
+          //   "service_za7a2fr",
+          //   "template_salm34e",
+          //   document.getElementById("contactMeForm"),
+          //   "foI0h44-8MaPuM7kQ",
+          //   {
+          //     name: this.name,
+          //     email: this.email,
+          //     content: this.content,
+          //   }
+          // );
+          this.snackbarContent = "Your email has been sent successfully!";
+          this.dialog = false;
+          this.$v.$reset();
+          this.name = "";
+          this.email = "";
+          this.content = "";
+          this.emailSentSnackbar = true;
+        } catch (error) {
+          this.snackbarContent =
+            "Your email couldn't be send due to the following error : " + error;
+        }
+      }
     },
     clear() {
       this.$v.$reset();
